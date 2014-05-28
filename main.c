@@ -39,11 +39,11 @@ void init_pins()
 	clear_bit(DDRC, PC4);
 	
 	// Zapewnienie 'czystego', tzn. cyfrowego sygnału z czujników
-	set_bit(PORTC, PC0);
-	set_bit(PORTC, PC1);
-	set_bit(PORTC, PC2);
-	set_bit(PORTC, PC3);
-	set_bit(PORTC, PC4);
+	clear_bit(PORTC, PC0);
+	clear_bit(PORTC, PC1);
+	clear_bit(PORTC, PC2);
+	clear_bit(PORTC, PC3);
+	clear_bit(PORTC, PC4);
 
 	// Ustawienie pinów PD jako wyjścia do sterowania kierunkiem obracania się koła
 	set_bit(DDRD, PD6);
