@@ -8,20 +8,18 @@
 #define clear_bit(x,y) x &= ~(_BV(y)) 
 
 // deklaracje zmiennych 
-unsigned int c0, c1, c2, c3, c4;
-float previous_error=0;
-float error = 0;
-char last_known_line_side;
-float P, I, D, correction;
-unsigned short int basespeed = 50;
+unsigned int c0, c1, c2, c3, c4; // Odczyt z czujników
+float previous_error=0; // Przechowuj poprzedni błąd
+float error = 0; // Przechowuje błąd obecny
+char last_known_line_side; // Ostatnia znana lokalizacja
+float P, I, D, correction; // Regulatory PID oraz korekcja
+unsigned short int basespeed = 50; // początkowa prędkość
 unsigned short Kp = 25;
 unsigned short Ki = 1;
 unsigned short Kd = 2;
 unsigned int leftpulse;
 unsigned int rightpulse;
-unsigned int max_speed = 250;
-uint16_t max_value = 1024;
-uint16_t curr_value;
+unsigned int max_speed = 250; // prędkość maksymalna
 bool allow = 0;
 
 void init_ref_voltage()
