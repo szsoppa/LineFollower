@@ -1,3 +1,0 @@
-w DDRx ustawiamy kierunki działania poszczególnych pinów ( 1 to wyjście )
-w PORTx ustawiamy początkowe stany na poszczególnych pinach
-TCCR - Timer Counter Control Register
